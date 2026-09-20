@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#030816">
+<script>document.documentElement.className+=" js";</script>
+<title>Prime IT Solutions | Websites, POS systems and business software</title>
+<meta name="description" content="Prime IT Solutions is a software engineering company. Business websites, POS systems, custom business software and IT projects for university students.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Michroma&family=Noto+Sans+Sinhala:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></symbol>
+</svg>
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Prime IT Solutions, home">
+      <span class="logo-chip"><img src="assets/logo-mark.png" alt="" width="32" height="30"></span>
+      <span class="brand-name">Prime IT Solutions</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#pos" data-i18n="nav.pos">POS demo</a>
+      <a href="#students" data-i18n="nav.students">Students</a>
+      <a href="#process" data-i18n="nav.process">How we work</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="hdr-tools">
+      <button class="pill" id="langBtn" type="button" aria-label="Switch language">සිංහල</button>
+      <a class="btn btn-primary sm hdr-cta" href="#contact" data-i18n="nav.cta">Free quote</a>
+      <button class="pill icon menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow chip rise" style="--i:0" data-i18n="hero.badge">Software engineering company</p>
+        <h1 data-i18n="hero.h1">We build the software your business runs on.</h1>
+        <p class="lead rise" style="--i:1" data-i18n="hero.sub">Prime IT Solutions is a software engineering company. We make websites, POS systems and custom business software, and we build IT projects for university students.</p>
+        <div class="cta-row rise" style="--i:2">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.btn1">Start a project</a>
+          <a class="btn btn-ghost" href="#services" data-i18n="hero.btn2">See what we build</a>
+        </div>
+        <p class="callline rise" style="--i:3"><span data-i18n="hero.call">Prefer to talk? Call</span> <a href="tel:+94765316063">076 531 6063</a></p>
+        <p class="cue rise" style="--i:4"><span data-i18n="hero.scroll">Scroll down and watch it change</span><i aria-hidden="true"></i></p>
+      </div>
+      <div class="stage" id="stage-hero" aria-hidden="true"></div>
+    </div>
+  </section>
+
+
+  <!-- Capabilities marquee -->
+  <div class="marquee" aria-hidden="true"><div class="mq-track"><span class="mq-item" data-i18n="mq1">Websites</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq2">POS systems</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq3">Business systems</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq4">University projects</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq5">Custom web apps</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq1">Websites</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq2">POS systems</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq3">Business systems</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq4">University projects</span><i class="mq-dot"></i><span class="mq-item" data-i18n="mq5">Custom web apps</span><i class="mq-dot"></i></div></div>
+
+  <!-- Services -->
+  <section class="sec" id="services">
+    <div class="wrap split">
+      <div class="stage stick" id="stage-services" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow" data-i18n="nav.services">Services</p>
+        <h2 data-i18n="svc.h2">Everything a business needs, built by one team.</h2>
+        <p class="intro" data-i18n="svc.intro">Pick a service to see what's included.</p>
+        <div class="acc">
+          <details open>
+            <summary><span class="name" data-i18n="s1.n">Business websites</span><span class="tag" data-i18n="s1.t">A fast, good-looking site that works on every phone.</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+            <div class="body">
+              <ul>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s1.a">Company and portfolio sites</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s1.b">Online stores</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s1.c">Booking and contact forms</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s1.d">Mobile-friendly design</span></li>
+              </ul>
+              <a class="ask" href="#contact" data-need="Business website" data-i18n="ask">Ask about this service</a>
+            </div>
+          </details>
+          <details>
+            <summary><span class="name" data-i18n="s2.n">Business systems</span><span class="tag" data-i18n="s2.t">Software made around how your business already works.</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+            <div class="body">
+              <ul>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s2.a">Inventory and stock control</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s2.b">Customer and order records</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s2.c">Reports and dashboards</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s2.d">Staff logins with different permissions</span></li>
+              </ul>
+              <a class="ask" href="#contact" data-need="Business system" data-i18n="ask">Ask about this service</a>
+            </div>
+          </details>
+          <details>
+            <summary><span class="name" data-i18n="s3.n">POS systems</span><span class="tag" data-i18n="s3.t">Billing and stock in one place, for shops and restaurants.</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+            <div class="body">
+              <ul>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s3.a">Fast billing and receipts</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s3.b">Stock that updates with every sale</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s3.c">Daily and monthly sales reports</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s3.d">Several cashiers on one system</span></li>
+              </ul>
+              <a class="ask" href="#contact" data-need="POS system" data-i18n="ask">Ask about this service</a>
+            </div>
+          </details>
+          <details>
+            <summary><span class="name" data-i18n="s4.n">University IT projects</span><span class="tag" data-i18n="s4.t">Final-year, research and group projects, built with you.</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+            <div class="body">
+              <ul>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s4.a">System design and database</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s4.b">Web and software development</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s4.c">Documentation and reports</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s4.d">A walkthrough so you can explain every part</span></li>
+              </ul>
+              <a class="ask" href="#contact" data-need="University IT project" data-i18n="ask">Ask about this service</a>
+            </div>
+          </details>
+          <details>
+            <summary><span class="name" data-i18n="s5.n">Custom web development</span><span class="tag" data-i18n="s5.t">Something else in mind? We build web pages and apps for anyone.</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+            <div class="body">
+              <ul>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s5.a">Landing pages</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s5.b">Web apps and dashboards</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s5.c">Redesigns of old sites</span></li>
+                <li><svg class="ck" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="s5.d">Fixes and upgrades</span></li>
+              </ul>
+              <a class="ask" href="#contact" data-need="Something else" data-i18n="ask">Ask about this service</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POS demo -->
+  <section class="sec" id="pos">
+    <div class="wrap pos-grid">
+      <div class="pos-copy">
+        <p class="eyebrow" data-i18n="nav.pos">POS demo</p>
+        <h2 data-i18n="pos.h2">Try a POS in your browser.</h2>
+        <p data-i18n="pos.p">This is a small demo of the kind of POS we build. Tap items to add them to the bill. Yours would be made for your shop, with your products, your prices and your reports.</p>
+        <a class="btn btn-ghost" href="#contact" data-need="POS system" data-i18n="pos.btn">Ask about a POS system</a>
+        <div class="stage" id="stage-pos" aria-hidden="true"></div>
+      </div>
+      <div class="tilt-wrap">
+        <div class="till">
+          <div class="till-head"><span data-i18n="pos.till">Demo till</span><i aria-hidden="true"><b></b><b></b><b></b></i></div>
+          <div class="till-body">
+            <div class="items" id="items"></div>
+            <div class="bill">
+              <h3 data-i18n="pos.bill">Bill</h3>
+              <ul id="lines"></ul>
+              <p class="empty" id="empty" data-i18n="pos.empty">Add items to start a bill.</p>
+              <div class="total"><span data-i18n="pos.total">Total</span><strong id="total">Rs. 0</strong></div>
+              <div class="till-actions">
+                <button class="btn btn-ghost sm" id="clear" type="button" data-i18n="pos.clear">Clear</button>
+                <button class="btn btn-primary sm" id="pay" type="button" data-i18n="pos.pay">Complete sale</button>
+              </div>
+              <p class="msg" id="posMsg" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Students -->
+  <section class="sec" id="students">
+    <div class="wrap split rev">
+      <div class="stage" id="stage-students" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow" data-i18n="nav.students">Students</p>
+        <h2 data-i18n="stu.h2">Working on your final-year project?</h2>
+        <p class="intro" data-i18n="stu.p">Bring your topic, your requirements and your deadline. We'll plan the system with you, build it, and walk you through it so you understand every part.</p>
+        <ul class="tags">
+          <li data-i18n="stu.t1">Management systems</li>
+          <li data-i18n="stu.t2">Web applications</li>
+          <li data-i18n="stu.t3">Database projects</li>
+          <li data-i18n="stu.t4">Research prototypes</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact" data-need="University IT project" data-i18n="stu.btn">Message us about your project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec" id="process">
+    <div class="wrap split rev">
+      <div class="stage stick" id="stage-process" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow" data-i18n="nav.process">How we work</p>
+        <h2 data-i18n="proc.h2">How a project runs</h2>
+        <p class="intro" data-i18n="proc.intro">Four steps from idea to launch.</p>
+        <ol class="steps">
+          <li><span class="n" aria-hidden="true">1</span><h3 data-i18n="p1.n">Tell us what you need</h3><p data-i18n="p1.d">Call, message or use the form. Tell us the goal, the deadline and any examples you like.</p></li>
+          <li><span class="n" aria-hidden="true">2</span><h3 data-i18n="p2.n">Get a plan and a price</h3><p data-i18n="p2.d">We reply with what we'll build, how long it takes and what it costs. No surprises after.</p></li>
+          <li><span class="n" aria-hidden="true">3</span><h3 data-i18n="p3.n">We build, you review</h3><p data-i18n="p3.d">You see progress as we go and can ask for changes along the way.</p></li>
+          <li><span class="n" aria-hidden="true">4</span><h3 data-i18n="p4.n">Launch and support</h3><p data-i18n="p4.d">We put it live, show you how to use it and stay around if something needs fixing.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap faq">
+      <p class="eyebrow" data-i18n="nav.faq">FAQ</p>
+      <h2 data-i18n="faq.h2">Questions people ask us</h2>
+      <div class="acc">
+        <details>
+          <summary><span class="name" data-i18n="q1.q">How much will it cost?</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+          <p class="ans" data-i18n="q1.a">It depends on what you need. Send us the details and we'll reply with a clear quote, free of charge.</p>
+        </details>
+        <details>
+          <summary><span class="name" data-i18n="q2.q">I'm not technical. Can I still work with you?</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+          <p class="ans" data-i18n="q2.a">Yes. Explain your idea in your own words, in Sinhala or English, and we'll turn it into a plan.</p>
+        </details>
+        <details>
+          <summary><span class="name" data-i18n="q3.q">How long does a project take?</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+          <p class="ans" data-i18n="q3.a">A simple website can take days. Systems and POS take longer. We give you a timeline with the quote.</p>
+        </details>
+        <details>
+          <summary><span class="name" data-i18n="q4.q">Can you help with my university project?</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+          <p class="ans" data-i18n="q4.a">Yes. We build and guide student projects, and we explain every part so you can present it with confidence.</p>
+        </details>
+        <details>
+          <summary><span class="name" data-i18n="q5.q">Do you help after the project is finished?</span><span class="pm"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-plus"/></svg></span></summary>
+          <p class="ans" data-i18n="q5.a">Yes. If something breaks or you want a change, message us and we'll sort it out.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="sec" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="stage" id="stage-contact" aria-hidden="true"></div>
+        <ul class="direct">
+          <li><small data-i18n="ct.call">Call</small><a href="tel:+94765316063">076 531 6063</a></li>
+          <li><small data-i18n="ct.email">Email</small><a href="mailto:primeitsolutionsplc@gmail.com">primeitsolutionsplc@gmail.com</a></li>
+          <li><small>Facebook</small><a href="https://web.facebook.com/people/Prime-It-Solutions/61594386206804/" target="_blank" rel="noopener">Prime IT Solutions</a></li>
+        </ul>
+      </div>
+      <div class="formcard">
+        <p class="eyebrow" data-i18n="nav.contact">Contact</p>
+        <h2 data-i18n="ct.h2">Tell us what you need.</h2>
+        <p class="sub" data-i18n="ct.p">Fill in the form and send it on WhatsApp or by email. We reply as soon as we can.</p>
+        <form id="form" novalidate>
+          <div class="two">
+            <div class="field"><label for="f-name" data-i18n="f.name">Your name</label><input id="f-name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone" data-i18n="f.phone">Phone number</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field">
+            <label for="need" data-i18n="f.need">I need</label>
+            <select id="need">
+              <option value="Business website" data-i18n="o1">A business website</option>
+              <option value="Business system" data-i18n="o2">A business system</option>
+              <option value="POS system" data-i18n="o3">A POS system</option>
+              <option value="University IT project" data-i18n="o4">A university IT project</option>
+              <option value="Something else" data-i18n="o5">Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-details" data-i18n="f.details">Details</label><textarea id="f-details" data-i18n-ph="f.ph" placeholder="Tell us about your idea, your deadline and any examples you like." required></textarea></div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="button" id="sendWa" data-i18n="f.wa">Send on WhatsApp</button>
+            <button class="btn btn-ghost" type="button" id="sendMail" data-i18n="f.mail">Send by email</button>
+          </div>
+          <p class="fmsg" id="fmsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a class="logo-full" href="#top" aria-label="Prime IT Solutions, back to top"><img src="assets/logo-full.png" alt="Prime IT Solutions logo" width="116" height="88"></a>
+        <p data-i18n="ft.p">Software engineering company. Websites, POS and business systems, and IT projects for university students.</p>
+      </div>
+      <div class="ft-links">
+        <a href="tel:+94765316063">076 531 6063</a>
+        <a href="mailto:primeitsolutionsplc@gmail.com">primeitsolutionsplc@gmail.com</a>
+        <a href="https://web.facebook.com/people/Prime-It-Solutions/61594386206804/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="copy" data-i18n="ft.c">© 2026 Prime IT Solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- UI logic: language, menu, POS demo, form, scroll effects -->
+<script src="js/main.js"></script>
+
+<!-- Logo pixel map (sampled from the logo) -->
+<script src="js/logo-points.js"></script>
+
+<!-- WebGL scene: the logo pixels, morphing as you scroll -->
+<script src="js/swarm.js"></script>
+</body>
+</html>
